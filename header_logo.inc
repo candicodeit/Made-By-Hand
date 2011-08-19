@@ -1,0 +1,1 @@
+<h1 class="logo"><img src="{site_url}imgs/logo.png" alt="Made by Hand" /></h1>

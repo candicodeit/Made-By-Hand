@@ -1,0 +1,467 @@
+/* Made by Hand styles */
+/* The visual design and layout for Made by Hand are copyright Mandy Brown and may not be reproduced. */
+
+
+/* reset --------------------------------------------------------------------------------------- */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b, u, i, dl, dt, dd, ol, ul, li { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; border: 0; outline: 0; background: transparent; }
+ol, ul { list-style: none; }
+:focus { outline: 0; }
+
+/** ----------------------
+ 	fonts loading 
+---------------------- **/
+.wf-loading { visibility: hidden; /* hide web fonts until they have finished loading */ }
+
+/** ----------------------
+ 	general 
+---------------------- **/
+body {
+	background: #F1F1EF;
+	color: #333;
+	font: 1.125em/1.5 "adobe-caslon-pro-1", "adobe-caslon-pro-2", "Times New Roman", Georgia, serif; /* 18px/16px */
+}
+#wrapper { max-width: 1200px; margin: 0 auto; background: #F1F1EF; overflow: hidden; }
+h2.title {
+	width: 45%; /* 540px/1200px */
+	font-size: 1.77777778em; /* 32px/16px */
+	font-style: italic;
+	font-weight: normal;
+	color: #333;
+	float: left; 
+	margin-left: 2%; /* 24px/1200px */
+	display: block;
+}
+h2.title span { 
+	width: 11.111111%; /* 60px/540px */
+	margin-top: -1px;
+	color: #666; 
+	font: 300 .4375em/1.2 "museo-sans-rounded-1", "museo-sans-rounded-2", sans-serif; /* 14px/32px */
+	display: block; 
+	text-transform: uppercase;
+}
+h3 { 
+	padding-top: .75em; /* 12px/16px */
+	font: bold 1em "museo-sans-rounded-1", "museo-sans-rounded-2", sans-serif; 
+	text-transform: uppercase; 
+}
+dl { 
+	margin: 1.5em 0; /* 24px/16px */ 
+	padding-top: 2.25em; /* 36px/16px */ 
+	border-top: 2px solid #ccc; 
+}
+dt { 
+	font: .75em/1.5 "museo-sans-rounded-1", "museo-sans-rounded-2", sans-serif; /* 12px/16px */
+	text-transform: uppercase;
+}
+dd { margin-bottom: 1.5em; /* 24px/16px */ font-style: italic; font-weight: bold; }
+p { margin: .75em 0; }
+a { 
+	color: #333; 
+	font-family: "museo-sans-rounded-1", "museo-sans-rounded-2", sans-serif;
+	text-decoration: none; 
+	font-style: normal; 
+	font-weight: bold; 
+}
+dd a { 
+	font-style: italic;
+	font-family: "adobe-caslon-pro-1", "adobe-caslon-pro-2", "Times New Roman", Georgia, serif; 
+}
+strong { font-weight: bold; }
+.twitter { text-transform: lowercase; }
+
+/** ----------------------
+ 	navigation 
+---------------------- **/
+#nav {  
+	width: 100%; 
+	height: 1.75em; /* 28px/16px */
+	background: #333; 
+	text-transform: uppercase;
+	margin-top: -.625em; /* -10px/16px */
+	padding-top: .75em;
+}
+#nav ul { 
+	width: 400px; 
+	margin: .375em auto; 
+	color: #ccc; 
+	font: .875em "museo-sans-rounded-1", "museo-sans-rounded-2", sans-serif; /* 14px/16px */
+}
+#nav ul li { min-width: 13.75%; float: left; margin-left: 3%; 
+}
+#nav ul li:after { content:'\002F'; }
+#nav ul li.twitter:after { content: ''; }
+#nav ul li.current a, #nav ul li a:hover { color: #fff; }
+#nav ul li.twitter { width: 30%; margin-right: 0; }
+#nav ul li a { 
+	color: #ccc;
+	font-size: 0.875em; /* 14px/16px */
+	font-weight: 300;
+	margin-right: 12px;
+}
+#nav ul li a img { margin-right: 3%; }
+
+/** -----------------------------
+ 	MBH heading (in header & footer) 
+------------------------------ **/
+#head { width: 100%; height: 45px; margin: 3em auto .75em; display: block; }
+#head h1.logo, #footer h1.logo {
+	width: 50%; /* 600px/1200px */
+	height: 2.8125em;
+	float: left;
+	margin-left: -1%; /* 10px/600px */
+}
+#head h1 img { float: right; width: 238px; }
+
+#footer h1.logo { margin-left: -1.2%; /* 4px/600px */ }
+#footer h1.logo img { float: right; max-width: 100%; }
+
+/** ----------------------
+ 	film
+---------------------- **/
+.film-container { margin: 1.5em 0; }
+.player { width: 100%; clear: both; position: relative; }
+.player iframe { z-index: 0; }
+.film-fallback { max-width: 100%; position: absolute; top: 0; left: 0; z-index: 10; }
+.film-desc { width: 40.416667%; /* 485px/1200px */ float: right; clear: both; margin: 0 8.5% 2.25em 0; }
+.film-desc p { font-style: italic; }
+.film-desc p a { font-style: normal; font-weight: bold; }
+
+iframe { max-width: 100%; }
+.ie6 #vimeo { width: 100%; }
+
+/** ----------------------
+ 	film listings 
+---------------------- **/ 
+.film-list { 
+	width: 83.333333%; /* 1000px/1200px */
+	clear: both; 
+	margin: 2.25em auto; 
+	border-top: 2px solid #666; 
+}
+.film-list h2.more-series { 
+	margin-top: -.9375em; /* 15px/16px */
+	text-align: center;
+} 
+.film-list h2.more-series img { width: 284px; margin: 0 auto; }
+
+/* Hover color for each film list item */
+.film-list a:hover h2.title, .film-list a:hover h2 span, .film-list a:hover p { color: #FF8600; }
+
+.film-list ol li { 
+	width: 100%; 
+	height: 15em; /* 270px/16px */
+	margin: .75em 0 1.25em; 
+	padding-top: 1em; 
+	border-top: 1px solid #ccc; 
+}
+.film-list-item h2.title, .film-list-item img, .film-list-item .film-desc { width: 48.5%; /* 485px/1000px */ }
+.film-list-item h2.title { 
+	margin: .75em 0; 
+	float: right;
+	clear: right;
+	border-bottom: 1px solid #999; 
+	font-size: 1.75em; /* 28px/16px */
+	font-family: "adobe-caslon-pro-1", "adobe-caslon-pro-2", "Times New Roman", Georgia, serif;
+}
+.film-list-item h2.title span { width: 150px; font-size: .5em; margin-bottom: .1875em; }
+.film-list-item img { float: left; }
+.film-list-item .film-desc { margin-right: .3%; float: right; clear: none; }
+.film-list-item .film-desc p { 
+	font-style: normal; 
+	font: normal .875em/1.25em "adobe-caslon-pro-1", "adobe-caslon-pro-2", "Times New Roman", Georgia, serif;
+	/* 14px/16px */
+}
+.film-list ol li.coming-soon, .film-list ol li:first-child  { border-top: none; }
+.film-list ol li.coming-soon h2 { color: #666; }
+
+/** ----------------------
+ 	about/shoppe
+---------------------- **/
+.about #head, .shoppe #head { border-bottom: 1px solid #ccc; padding-bottom: 1.5em; /* 24px/16px */ }
+.about h2.title, .shoppe h2.title { margin-top: .375em; /* 12px/32px */ }
+
+.about .project { width: 65.833333%; /* 790px/1200px */ min-height: 800px; margin: 1.5em auto; }
+.project div { width: 74.683545%; /* 590px/790px */ float: left; }
+.project dl { 
+	width: 22.78481%; /* 180px/790px */ 
+	float: right; 
+	margin: .875em -1.518987% 0 0; 
+	padding: 0; 
+	border: none; 
+}
+.project strong { 
+	font: bold 1em/1.5 "museo-sans-rounded-1", "museo-sans-rounded-2", sans-serif; 
+	text-transform: uppercase;
+}
+
+.shoppe .shoppe-list { width: 83.333333%; /* 1000px/1200px */ margin: 0 auto; }
+.shoppe-list-item { 
+	margin: 1.5em 0 .875em; 
+	padding-bottom: .875em; 
+	border-bottom: 1px solid #ccc; 
+	display: block; 
+	clear: both;
+	overflow: hidden;
+}
+.shoppe-list-item img, .shoppe-list-item .item-desc { width: 48.5%; /* 485px/1000px */ float: left; }
+.shoppe-list-item .buy { 
+	color: #fff; 
+	font: .875em/1.5 "museo-sans-rounded-1", "museo-sans-rounded-2", sans-serif;
+	text-transform: uppercase;
+	background: #666; 
+	margin-right: 2.474227%; /* 12px/485px */ 
+	padding: .1875em 1.030928%;
+	border-radius: 3px;
+}
+.shoppe-list-item .buy:hover { cursor: pointer; background: #333; }
+.shoppe-list-item .price, .shoppe-list-item .date { 
+	color: #666; 
+	font: 300 .75em/1.5 "museo-sans-rounded-1", "museo-sans-rounded-2", sans-serif; 
+}
+.shoppe-list-item .item-desc { float: right; margin-bottom: 36px; }
+.shoppe-list-item .item-desc p { 
+	font-style: normal; 
+	font: normal 1em/1.375em "adobe-caslon-pro-1", "adobe-caslon-pro-2", "Times New Roman", Georgia, serif; 
+	/* 18px font size/22px line-height */
+}
+
+.pagination { width: 83.333333%; /* 1000px/1200px */ height: 72px; margin: .75em auto; }
+.pagination li { width: 12px; height: 22px; float: left; margin-right: 12px; }
+.pagination li span, .pagination li a { font-family: "museo-sans-rounded-1", "museo-sans-rounded-2", sans-serif; }
+.pagination li span.current, .pagination li:hover a { 
+	width: 12px;
+	color: #fff;
+	text-align: center;
+	background: #666;
+	margin-left: -4px; 
+	padding: 0 2px;  
+	border-radius: 3px; 
+	display: inline-block; 
+}
+
+/** ----------------------
+ 	footer 
+---------------------- **/
+#footer {
+	width: 100%; 
+	background: #333;
+	color: #ccc;
+	font-style: italic;
+	padding: 3em 0;
+	font-size: 18px;
+	line-height: 1.33333333em; 
+	overflow: hidden;
+}
+#footer .group { max-width: 1200px; }
+#footer a { color: #fff; }
+
+/*---- MBH description ----*/
+#footer .about-project { 
+	width: 83.333333%; /* 1000px/1200px */ 
+	height: 4.6875em; 
+	margin: 0 auto; 
+	display: block; 
+}
+#footer .about-project p { width: 385px; color: #ccc; float: left; margin: 0 0 0 30px; display: block; }
+
+/*---- Twitter feed ----*/
+.twitter-feed { 
+	width: inherit; 
+	margin: 4em auto .5em; 
+	padding-bottom: 2em;
+	border-top: 2px solid #666;
+	border-bottom: 2px solid #666; 
+	overflow: visible;
+} 
+.twitter-feed h2 { margin-top: -15px; text-align: center; }
+.twitter-feed h2 img { margin: 0 auto; }
+.twitter-feed ol { width: 100%; height: 140px; margin: .66666667em auto; padding: 0 .5%; }
+.twitter-feed ol li { 
+	width: 31.666667%; /* 380xp/1200px */ 
+	float: left; 
+	display: block; 
+	margin-right: 1.666667%; 
+}
+#footer .twitter-feed a { font-weight: 300; color: #fff; }
+.twitter-feed .date { 
+	font-size: .66666667em; 
+	font-style: normal;
+	font-weight: 100;
+	font-family: "museo-sans-rounded-1", "museo-sans-rounded-2", sans-serif; 
+}
+
+/*---- Copyright ----*/
+.copyright { width: 370px; height: 2em; margin: 0 auto; font-size: .77777778em; /* 14px/18px */ }
+#footer .copyright a { 
+	color: #fff; 
+	border-right: 1px solid #fff; 
+	margin: 6px 6px 0 0; 
+	padding-right: 12px;
+	float: left;
+	line-height: 1em;
+}
+.copyright span { min-width: 105px; margin-top: 3px; float: left; display: inline-block; }
+.copyright span:last-child { margin-left: 4px; }
+
+/** ----------------------
+ 	clear floats 
+---------------------- **/
+
+.group:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+}
+
+/** --------------------------------------------
+ 	media queries
+------------------------------------------- **/
+@media screen and (max-width: 1200px) { #footer .group { width: 94.791667%; /* 728px/768px */ } }
+@media screen and (max-width: 1150px) { 
+	.film-container { text-align: center; } 
+	.player { width: 94.921875%; /* 972px/1024px */ margin: 0 auto; } 
+	.film-desc { text-align: left; }
+}
+
+/* ---- 
+	max-width 1024px 
+---- */
+@media screen and (max-width: 1024px) { 
+	.film-desc { width: 44.921875%; /* 345px/768px */ margin-right: 3.90625%; /* 29px/768px */ }
+	.film-list { width: 94.791667%; /* 728px/768px */ }
+	.film-list-item h2.title { margin: 0; }
+	
+	#footer .group { width: 94.791667%; /* 728px/768px */ }
+	#footer .about-project p { width: 345px; margin-left: 21px; }
+	#footer .twitter-feed li { width: 45%; }
+	#footer .twitter-feed li:first-child { margin-right: 45px; }
+	#footer .twitter-feed li:last-child { display: none; }
+}
+/* ---- 
+	max-width 768px 
+---- */
+@media screen and (max-width: 768px){
+	#wrapper { margin: 0 20px; overflow: hidden; }
+	h2.title span { width: 75%; }
+	.about .project, .shoppe .shoppe-list { width: 94.791667%; /* 728px/768px */ }
+	#footer .about-project p { width: 41.40625%; }
+}
+/* ---- 
+	max-width 600px 
+---- */
+@media screen and (max-width: 600px) {
+	#wrapper { margin: 0 20px; overflow: hidden; }
+	#head h1.logo, h2.title, h2.title span, .film-desc, .film-list, .film-list-item img, 
+	.film-list-item .film-desc, .film-list-item h2.title, .film-list-item h2.title span, 
+	#footer .about-project p, .twitter-feed ol li { width: 100%; }
+	
+	#head { height: 105px; }
+	h2.title { 
+		width: 100%; 
+		height: 2.5em; /* 40px/16px */ 
+		font-size: 1.33333333em;
+		float: none; 
+		text-align: center; 
+		margin: 0; 
+		display: block; 
+	}
+	h2.title span { 
+		width: 100%; 
+		font-size: .4375em;
+		clear: both; 
+		float: left; 
+		display: inline-block;
+		margin-top: 12px;
+	}
+	
+	#head h1.logo, #footer h1.logo { float: none; margin: 0 auto; text-align: center; }
+	#head h1.logo img { float: none; margin: 0 auto; }
+	
+	.film-desc { float: none; }
+	.film-list ol li { 
+		min-height: 470px; 
+		margin: .75em 0;
+		border-bottom: 1px solid #ccc; 
+		padding-bottom: 24px; 
+		border-top: none; 
+	}
+	.film-list-item { margin: 0 0 12px 0; height: 18.1481481em; /* 490px/27px */ }
+	.film-list-item h2.title { border-bottom: none; margin: 0; }
+	.film-list-item .film-desc { margin: 0; }
+
+	/* ----- about ----- */
+	.about #head, .shoppe #head { height: 4.6875em; }
+	.about .project { width: 100%; }
+	.project div, .project dl { width: inherit; float: none; }
+	.project div { border-bottom: 1px solid #ccc; margin-bottom: 24px; }
+	
+	/* ----- shoppe ------ */
+	.shoppe .shoppe-list { width: 100%; }
+	.shoppe-list-item { margin: 12px 0 0 0; border-bottom: 1px solid #ccc; }
+	.shoppe-list-item:first-child { margin-top: 12px; }
+	.shoppe-list-item img, .shoppe-list-item .item-desc { width: 100%; float: none; }
+	.shoppe-list-item img { margin-top: 12px; }
+	.shoppe-list-item .item-desc { margin: 12px 0; }
+	.pagination { margin-left: 0; } 	
+	
+	/* ----- footer ------ */
+	#footer .group { width: 90.833333%; /* 545px/600px */ }
+	#footer .about-project { height: 6.0625em; }
+	#footer .about-project p { margin: 12px 0 0 0; }
+	#footer .twitter-feed ol { margin-top: 0; }
+	#footer .twitter-feed ol li { margin: 6px 0 0 0; width: 100%; }
+	#footer .twitter-feed ol li:last-child { display: block; }
+	.copyright { margin-top: 1.25em; }
+}
+/* ----
+	max-width 480px
+---- */
+@media screen and (max-width: 480px){
+	.film-list ol li { min-height: 420px; }
+	#footer .twitter-feed ol li p { margin-bottom: 0; }
+}
+/* ----
+	max-width 400px
+---- */
+@media screen and (max-width: 400px) { 
+	#nav { height: 3.125em; /* 28px/16px */ }
+	#nav ul { width: 60%; /* 230px/400px */ clear: both; }
+	#nav ul li:nth-child(3) a { margin-right: 0; }
+	#nav ul li:nth-child(3):after { content: ''; }
+	#nav ul li:last-child { width: 230px; }
+	#nav ul li a.twitter { width: 100%; margin: 0 26.086957%; }
+}
+/* ---- 
+	max-width 320px 
+---- */
+@media screen and (max-width: 320px) {
+	h2.title span { margin-top: 0; }
+	dd { margin-bottom: 1em; }
+	
+	#nav ul { width: 75%; height: 50px; /* 240px/320px */ }
+
+	#head h1.logo, #footer h1.logo { width: 53.125%; height: 2.375em; /* 38px/16px */ float: none; margin: 12px auto 0;	}
+	
+	.film-desc { width: 100%; float: none; }
+	
+	.film-list, .film-list-item img, .film-list-item .film-desc { width: 100%; }	
+	.film-list h2.more-series { margin-top: -.59375em; /* 9.5px/16px */ }
+	.film-list h2.more-series img { width: 210px; }
+	.film-list-item h2.title { height: 2em; border: none; margin-bottom: 0; }
+	.film-list-item h2.title span { width: 100%; }
+	.film-list-item .film-desc { margin-bottom: 0; }
+	
+	#footer h1.logo { width: 100%; text-align: center; } 
+	#footer h1.logo img { width: 61.8175%; /* 198px/320px */ margin: 0 auto; float: none; }
+	#footer .about-project { height: 10em; }
+	
+	#footer .twitter-feed { margin: 2em auto .5em; border-bottom: 2px solid #666; padding-bottom: 3.75em; clear: both; }
+	#footer .twitter-feed h2 img { width: 280px; margin-left: -7px; }
+	#footer .twitter-feed ol { margin-top: 0; }
+	
+	.copyright { width: 87.5%; /* 280px/320px */ margin-top: 1.25em; text-align: center }
+	.copyright span:last-child { width: 100%; float: none; margin: 0 auto; }
+}
